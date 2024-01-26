@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:recipe_app/views/home.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
           bodyText2: TextStyle(color: Colors.white),
         )
       ),
-      home: const Scaffold(),
+      home: HomePage(),
     );
   }
 }
