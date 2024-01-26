@@ -1,9 +1,13 @@
+// ignore_for_file: library_private_types_in_public_api
+
 import 'package:flutter/material.dart';
 import 'package:recipe_app/models/recipe.api.dart';
 import 'package:recipe_app/models/recipe.dart';
 import 'package:recipe_app/views/widgets/recipe_card.dart';
 
 class HomePage extends StatefulWidget {
+  const HomePage({Key? key}) : super(key: key);
+
   @override
   _HomePageState createState() => _HomePageState();
 }
@@ -29,7 +33,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Row(
+          title: const Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Icon(Icons.restaurant_menu),
@@ -39,7 +43,7 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
         body: _isLoading
-            ? Center(child: CircularProgressIndicator())
+            ? const Center(child: CircularProgressIndicator())
             : ListView.builder(
                 itemCount: _recipes.length,
                 itemBuilder: (context, index) {
